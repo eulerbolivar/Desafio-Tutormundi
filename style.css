@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: 'Concert One', cursive;
+    font-size: 16px;
+}
+
+.nota_estrela{
+    user-select: none;
+}
+
+.estrela {
+    display: inline-block;
+    border: none;
+    background-color: unset;
+}
+
+.estrela:hover {
+    cursor: pointer;
+}
