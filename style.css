@@ -2,28 +2,139 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Londrina Solid', cursive;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cartao {
+    position: relative;
+    width: 350px;
+    height: 460px;
+
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+
+.cartao .circulo {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-color: white;
-    color: black;
-    font-family: 'Concert One', cursive;
-    font-size: 16px;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.nota_estrela{
-    user-select: none;
+.cartao .circulo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #D9C729; 
+    clip-path: circle(60px at center);
+    transition: 1s;
+    
 }
 
-.estrela {
-    display: inline-block;
+.cartao:hover .circulo:before {
+    background-color: #502ADA;
+    clip-path: circle(400px at center);
+    
+}
+
+.cartao img {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.cartao:hover img{
+    top: 2%;
+    height: 110px;
+}
+
+.cartao .topo {
+    letter-spacing: 1.5px;
+    position: relative;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    margin-top: 75px;
+    background-color: #D9C729;
+    padding: 5px;
+    border-radius: 15px;
+    transition: 1.0s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cartao:hover .topo {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.cartao .botoes {
+    margin-top: 100%;
+    position: absolute;
+    opacity: 0;
+    width: 50%;
+    margin: auto;
+    height: 3em;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    min-width: 300px;
     border: none;
-    background-color: unset;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    text-align: center;
 }
 
-.estrela:hover {
-    cursor: pointer;
+.cartao:hover .botoes {
+    opacity: 1;
+    background-color: #1b0166;
+    color: white;
+    border: none;
+}
+
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+textarea {
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+fieldset:last-of-type {
+  padding-bottom: 2px;
+  border: none;
+}
+
+#submit {
+    letter-spacing: 0.6px;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 3px;
+    border-radius: 6px;
 }

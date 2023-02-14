@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Avaliação de Tutor</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <img src="/Desafio TutorMundi/img/livro.png" alt="Avalie seu tutor">
-    <h1 id="title">Como foi a ajuda do tutor?</h1>
+    <div class="cartao">
+        <div class="circulo"></div>
+        <div class="topo">
+            <h2>Como foi a ajuda do tutor?</h2>   
+        </div>
+        <div class="botoes">
+            <fieldset>
+                <label for="comments">
+                    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Me explique porque não gostou..."></textarea>
+                </label>
+            </fieldset>
+            <input id="submit" type="submit" value="Enviar comentário" class="button">
+        </div>
+        <img src="livro.png" alt="livro">
+    </div>
 
-    <button class="estrela"><img  src="/Desafio TutorMundi/img/estrela_vazia.svg" alt="Estrela Vazia"></button>
-    <button class="estrela"><img  src="/Desafio TutorMundi/img/estrela_vazia.svg" alt="Estrela Vazia"></button>
-    <button class="estrela"><img  src="/Desafio TutorMundi/img/estrela_vazia.svg" alt="Estrela Vazia"></button>
-    <button class="estrela"><img  src="/Desafio TutorMundi/img/estrela_vazia.svg" alt="Estrela Vazia"></button>
-    <button class="estrela"><img  src="/Desafio TutorMundi/img/estrela_vazia.svg" alt="Estrela Vazia"></button>
-
-    <input id="pular" type="submit" value="PULAR" class="button">
-    <input id="confirmar" type="submit" value="CONFIRMAR" class="button">
+    
 </body>
 </html>
