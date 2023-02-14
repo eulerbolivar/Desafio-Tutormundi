@@ -49,7 +49,6 @@ body {
 .cartao:hover .circulo:before {
     background-color: #502ADA;
     clip-path: circle(400px at center);
-    
 }
 
 .cartao img {
@@ -72,7 +71,7 @@ body {
 
     position: absolute;
     left: 50%;
-    top: 7%;
+    top: 6%;
     transform: translate(-50%, -50%);
 
     text-align: center;
@@ -80,7 +79,7 @@ body {
     margin-top: 75px;
     background-color: #D9C729;
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 10px;
     transition: 1.0s;
     opacity: 0;
     visibility: hidden;
@@ -96,29 +95,43 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
     border: #000000 solid 5px;
+    top: -10%;
     margin: auto;
-    padding: 10px;
+    padding: 5px;
 
     opacity: 0;
     visibility: hidden;
 }
 
 .cartao:hover .estrelas{
-
     opacity: 1;
     visibility: visible;
+    transition: 1.5s;
 }
 
 .cartao .estrelas input {
     position: relative;
-    width: 20px;
-    height: 40px;
     display: flex;
+    width: 25px;
+    height: 60px;
+
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.cartao .botoes {
+.cartao .estrelas input::before {
+    content: '\f005';
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 34px;
+    left: 4px;
+}
+
+.cartao .comentarios {
     display: block;
     position: absolute;
     width: 100%;
@@ -131,9 +144,7 @@ body {
     
 }
 
-
-
-.cartao:hover .botoes {
+.cartao:hover .comentarios {
     opacity: 1;
     color: white;
     border: none;
@@ -146,6 +157,7 @@ input::-webkit-inner-spin-button{
 
 textarea {
     display: block;
+    resize: none;
 
     width: 240px;
     height: 120px;
@@ -181,7 +193,7 @@ fieldset:last-of-type {
     padding: 6px;
     border-radius: 5px;
 
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 95%;
     transform: translate(-50%, -50%);
@@ -191,4 +203,8 @@ fieldset:last-of-type {
 #submit:hover {
     color: white;
     background-color: rgb(43, 39, 39);
+}
+
+#submit:active {
+    
 }
