@@ -27,36 +27,46 @@
   <body>
     <div class="cartao">
       <div class="circulo"></div>
-      <img src="/Desafio TutorMundi/img/livro.png" alt="livro" />
+      <img src="/Desafio TutorMundi/img/livro.png" alt="ícone de livro" />
 
       <div class="topo">
         <h2>Como foi a ajuda do tutor?</h2>
       </div>
 
       <div class="estrelas">
-        <input type="radio" name="star" value="0" />
-        <input type="radio" name="star" value="0" />
-        <input type="radio" name="star" value="0" />
-        <input type="radio" name="star" value="0" />
-        <input type="radio" name="star" value="0" />
+        <input type="radio" name="star" value="5"/>
+        <input type="radio" name="star" value="4"/>
+        <input type="radio" name="star" value="3"/>
+        <input type="radio" name="star" value="2"/>
+        <input type="radio" name="star" value="1"/>
       </div>
 
       <div class="final">
-        <div class="btnPular"><a href="#" class="pular">Pular</a></div>
+        <div class="btnPular"><button class="pular">Pular</button></div>
         <div class="btnConfirmar">
-          <a href="#" class="confirmar">Confirmar</a>
+          <button class="confirmar" id="confirmar1" onclick="qualEstrela()" disabled>Confirmar</button>
         </div>
       </div>
-      <!--
-        <div class="comentarios">
-            <fieldset>
-                <label for="comments">
-                    <textarea name="comments" id="comments" cols="30" rows="6" placeholder="Nos explique porque não gostou..."></textarea>
-                </label>
-            </fieldset>
-            <input id="submit" type="submit" value="Enviar comentário" class="button">
-        </div>
-        -->
+
+      <!--<div class="comentarios">
+        <fieldset>
+          <label for="comments">
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="6"
+              placeholder="Nos explique porque não gostou..."
+            ></textarea>
+          </label>
+        </fieldset>
+        <input
+          id="submit"
+          type="submit"
+          value="Enviar comentário"
+          class="button"
+        />
+      </div>-->
     </div>
   </body>
 </html>
