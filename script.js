@@ -1,7 +1,6 @@
-let cartaoTotal = document.querySelector('.cartao')
-//cartaoTotal.setAttribute('height', '450px')
-
+// CONTROLE DO BOTÃO DE CONFIRMAR 
 const estrelas = document.querySelector('.estrelas')
+const cartaoTotal = document.querySelector('.cartao')
 let selecao = [];
 
 estrelas.addEventListener('change', event => {
@@ -13,12 +12,24 @@ estrelas.addEventListener('change', event => {
     if (selecao.length != 0){
         document.getElementById("confirmar1").disabled = false;
     }
+
+    if (selecao == 1 || selecao == 2){
+      cartaoTotal.style.height = '450px'
+      //console.log(`a selecao está valendo ${selecao}`)
+    } else {
+      cartaoTotal.style.height = '350px'
+    }
   }
 })
 
+// PRINT DA QUANTIDADE DE ESTRELAS
 function qualEstrela(){
     if (selecao.length == 0){
         return console.log("Nenhuma estrela foi escolhida!")
     }
     console.log(selecao[(selecao.length)-1])
 }
+
+// CONTROLE DA CAIXA DE COMENTÁRIOS
+
+//
