@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Londrina Solid';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 460px;
+    height: 600px;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.container .limite {
+    position: relative;
+    width: 440px;
+    height: 580px;
+    justify-content: center;
+    margin-top: 10px;
+    margin: 10px auto;
+    
+}
+
+.container:hover {
+    box-shadow: 20px 20px 60px #a0a0a0,
+    -20px -20px 60px #ffffff;
+    transition: 1.5s;
+}
+
+.container .circulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .circulo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #502ADA; 
+    clip-path: circle(100px at center);
+    transition: 1s;
+}
+
+.container:hover .circulo:before {
+    background-color: #ffffff;
+    clip-path: circle(400px at center);
+}
+
+/* ÍCONE */
+.container .limite .bloco1 {
+    width: 100%;
+    display: flex;
+}
+
+.container .limite .bloco1 img{
+    display: block;
+    margin: auto;
+    height: 150px;
+    transform: translate(-50%, -50%); 
+    position: absolute;
+    top: 51%;
+    left: 52%;
+}
+
+.container:hover .limite img{
+    top: 2%;
+    height: 160px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/* TEXTO */
+.container .limite .bloco2 {
+    width: 90%;
+    height: 23%;
+    margin: 100px auto 0;   
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container:hover .limite .bloco2{
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
+
+.container .limite .bloco2 h2 {
+    font-size: 54px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-top: 10px;  
+}
+
+/* ESTRELAS */
+.container .limite .bloco3 {
+    width: 90%;
+    height: 15%;
+    margin: 2% auto 0;  
+    opacity: 0;
+    visibility: hidden;  
+}
+
+.container:hover .limite .bloco3{
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
+
+.container .limite .bloco3 .estrelas {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: row-reverse;
+    -webkit-text-stroke: #000000 2px;
+}
+
+.container .limite .bloco3 .estrelas input {
+    width: 60px;
+    height: 60px;
+    margin: 6px;
+    cursor: pointer;
+    overflow: hidden;
+    appearance: none;
+}
+
+.container .limite .bloco3 .estrelas input::before {
+    content: '\f005';
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 50px;
+    color: #ffffff;
+    transition: 0.8s;
+    font-weight: 900;
+}
+
+.container .limite .bloco3 .estrelas input:hover ~ input::before,
+.container .limite .bloco3 .estrelas input:hover::before,
+.container .limite .bloco3 .estrelas input:checked ~ input::before,
+.container .limite .bloco3 .estrelas input:checked::before
+{
+    color: #FFDD62;
+}
+
+/* BOTÕES */
+.container .limite .bloco4 {
+    width: 90%;
+    height: 10%;
+    margin: 10% auto;   
+    opacity: 0;
+    visibility: hidden;    
+}
+
+.container:hover .limite .bloco4{
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
+
+.container .limite .bloco4 .btnPular, 
+.container .limite .bloco4 .btnConfirmar {
+    width: 49.4%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.container .limite .bloco4 .btnPular .pular {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background: #ffffff;
+    width: 180px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #2DC5D0;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: .5px;
+    border: none;
+    box-shadow:  15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+    
+}
+
+.container .limite .bloco4 .btnConfirmar .confirmar{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background: #2DC5D0;
+    width: 180px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: .5px;
+    border: none;
+    transition: .5s;
+    box-shadow:  15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+}
+
+.container .limite .bloco4 .btnConfirmar .confirmar:disabled {
+    background-color: #C8C8C8;
+    color: white;
+    cursor: default;
+    
+}
+
+.container .limite .bloco4 .btnPular:hover, .btnPular:focus, .btnPular:active,
+.container .limite .bloco4 .btnConfirmar:hover, .btnConfirmar:focus, .btnConfirmar:active{
+    -webkit-transform: scale(0.9);
+    transform: scale(0.95);
+    transition: 0.8s;
+}
+
+/* COMENTÁRIOS */
+.container .limite .blocoC {
+    width: 90%;
+    height: 23%;
+    margin: 2% auto;  
+    opacity: 0;
+    visibility: hidden;      
+}
+
+.container:hover .limite .blocoC {
+    color: white;
+    border: none;
+    transition: .8s;
+}
+
+.container .limite .blocoC input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.container .limite .blocoC textarea {
+    display: flex;
+    resize: none;
+    margin: auto;
+    width: 85%;
+    background-color: #ffffff;
+
+    color: #000000;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    bottom: 0;
+}
+
+.container .limite .blocoC fieldset:last-of-type {
+  padding-bottom: 2px;
+  border: none;
+}
+
+.container .limite .blocoC #submit {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 85%;
+    letter-spacing: 0.8px;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    bottom: 0;
+}
+
+.container .limite .blocoC #submit:hover {
+    color: white;
+    background-color: rgb(43, 39, 39);
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 320px;
+        height: 430px;
+    }
+    
+    .container .limite {
+        width: 300px;
+        height: 380px;
+    }
+
+    .container .circulo::before {
+        clip-path: circle(60px at center);
+    }
+    
+    /* ÍCONE */
+    .container .limite .bloco1 img{
+        height: 90px;
+        top: 55%;
+    }
+
+    .container:hover .limite img{
+        top: 2%;
+    }
+
+    /* TEXTO */
+    .container .limite .bloco2 h2 {
+        font-size: 30px;
+        margin-top: 0px;
+    }
+
+    /* ESTRELAS */
+    .container .limite .bloco3 .estrelas input {
+        width: 30px;
+        height: 30px;
+        margin: 6px;
+    }
+
+    .container .limite .bloco3 .estrelas input::before {
+        font-size: 30px;
+    }
+
+    /* COMENTÁRIOS */
+    .container .limite .blocoC textarea {
+        font-size: 16px;
+        height: 75px;
+    }
+
+    .container .limite .blocoC #submit {
+        font-size: 12px;
+    }
+
+    /* BOTÕES */
+    .container .limite .bloco4 .btnPular .pular,
+    .container .limite .bloco4 .btnConfirmar .confirmar {
+
+        font-size: 14px;
+        width: 120px;
+        padding: 10px;
+        transition: 0s;
+    }
+    
+
+  }

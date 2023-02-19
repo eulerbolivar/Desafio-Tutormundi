@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Avalie aqui como foi o contato com seu tutor!"/>
+    <title>Avaliação de Tutor</title>
+
+    <!-- FONTES E LINKS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="limite">
+            <!--ÍCONE-->
+            <div class="bloco1">
+                <img src="livro.png" alt="ícone de livro" />
+            </div>
+
+            <!--TEXTO-->
+            <div class="bloco2">
+                <h2>Como foi a ajuda do tutor?</h2>
+            </div>
+
+            <!--ESTRELAS-->
+            <div class="bloco3">
+                <div class="estrelas">
+                    <input type="radio" name="star" value="5"/>
+                    <input type="radio" name="star" value="4"/>
+                    <input type="radio" name="star" value="3"/>
+                    <input type="radio" name="star" value="2"/>
+                    <input type="radio" name="star" value="1"/>
+                  </div>
+            </div>
+
+            <!--BOTÕES-->
+            <div class="bloco4">
+                <div class="btnPular"><button class="pular">Pular</button></div>
+                <div class="btnConfirmar"><button class="confirmar" id="confirmar1" onclick="qualEstrela()" disabled>Confirmar</button></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
